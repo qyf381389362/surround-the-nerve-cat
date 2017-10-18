@@ -3,13 +3,13 @@ function Circle(){
   this.setCircleType = function(type){
     this._circleType = type;
     switch(type){
-      case 1:
+      case Circle.TYPE_UNSELECTED:
         this.setColor("#cccccc");
         break;
-      case 2:
+      case Circle.TYPE_SELECTED:
         this.setColor("#ff6600");
         break;
-      case 3:
+      case Circle.TYPE_CAT:
         this.setColor("#0000ff");
         break;
     }
@@ -27,3 +27,8 @@ function Circle(){
   this.setCircleType(1);//默认为灰色
 }
 Circle.prototype = new createjs.Shape();
+
+//type可能在app.js中使用，将其定义为公共的，这样就可以直接通过类名进行调用了
+Circle.TYPE_UNSELECTED = 1;
+Circle.TYPE_SELECTED = 2;
+Circle.TYPE_CAT = 3;
