@@ -21,7 +21,7 @@ function Circle(){
     this.graphics.endFill();
   }
 
-  this.getCircleTyep = function(){
+  this.getCircleType = function(){
     return this._circleType;
   }
   this.setCircleType(1);//默认为灰色
